@@ -57,3 +57,13 @@ if st.button("Predecir Churn"):
     prob = modelo.predict_proba(df)[0, 1]
     st.success(f"Probabilidad de churn: **{prob:.2%}**")
 
+# Mostrar inputs al usuario (pero no usarlos en input_data)
+gender = st.selectbox("Género", ["Male", "Female"])
+payment = st.selectbox("Método de pago", [
+    "Credit card (automatic)",
+    "Electronic check",
+    "Mailed check",
+    "Bank transfer (automatic)"
+])
+
+
