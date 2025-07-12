@@ -66,3 +66,39 @@ payment = st.selectbox("Método de pago", [
 if st.button("Predecir Churn"):
     prob = modelo.predict_proba(df)[0, 1]
     st.success(f"Probabilidad de churn: **{prob:.2%}**")
+
+
+# Estilo visual personalizado (rojo/azul oscuro)
+st.markdown("""
+    <style>
+        body {
+            background-color: #0e1117;
+        }
+        .stApp {
+            background-color: #0e1117;
+        }
+        .stSlider > div[data-baseweb="slider"] > div {
+            color: red;
+        }
+        .stButton>button {
+            background-color: #003366;
+            color: white;
+            border-radius: 10px;
+            padding: 10px 16px;
+        }
+        .stButton>button:hover {
+            background-color: #0055aa;
+            color: white;
+        }
+        .stSelectbox > div, .stNumberInput > div {
+            color: white;
+        }
+        .st-bx {
+            background-color: #222;
+        }
+        .stAlert {
+            font-weight: bold;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
