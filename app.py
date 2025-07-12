@@ -13,6 +13,13 @@ tenure = st.slider("Tenure (meses de permanencia)", 0, 72, 12)
 monthlycharges = st.number_input("Monthly Charges", value=70.0)
 totalcharges = st.number_input("Total Charges", value=845.0)
 contract = st.selectbox("Tipo de contrato", ["Month-to-month", "One year", "Two year"])
+gender = st.selectbox("Género", ["Male", "Female"])
+payment = st.selectbox("Método de pago", [
+    "Credit card (automatic)",
+    "Electronic check",
+    "Mailed check",
+    "Bank transfer (automatic)"
+])
 
 # Diccionario base (puedes ajustar los valores según tus variables dummies reales)
 input_data = {
