@@ -68,36 +68,42 @@ if st.button("Predecir Churn"):
     st.success(f"Probabilidad de churn: **{prob:.2%}**")
 
 
-# Estilo visual personalizado (rojo/azul oscuro)
 st.markdown("""
     <style>
-        body {
-            background-color: #0e1117;
-        }
         .stApp {
-            background-color: #0e1117;
+            background-color: #fefae0;
+            font-family: 'Arial', sans-serif;
+        }
+        h1 {
+            color: #e63946;
+            font-weight: 800;
+            text-align: center;
         }
         .stSlider > div[data-baseweb="slider"] > div {
-            color: red;
+            color: #e63946;
         }
         .stButton>button {
-            background-color: #003366;
+            background-color: #e63946;
             color: white;
-            border-radius: 10px;
-            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-weight: bold;
         }
         .stButton>button:hover {
-            background-color: #0055aa;
-            color: white;
+            background-color: #a8dadc;
+            color: black;
         }
-        .stSelectbox > div, .stNumberInput > div {
-            color: white;
+        .stSelectbox > div, .stNumberInput > div, .stTextInput > div {
+            color: #1d3557;
         }
         .st-bx {
-            background-color: #222;
+            background-color: white;
         }
         .stAlert {
             font-weight: bold;
+            background-color: #a8dadc;
+            color: #1d3557;
         }
     </style>
 """, unsafe_allow_html=True)
