@@ -74,14 +74,16 @@ st.markdown("""
             background-color: #fefae0;
             font-family: 'Arial', sans-serif;
         }
-        h1 {
-            color: #e63946;
-            font-weight: 800;
-            text-align: center;
+
+        h1, h2, h3, h4, h5, h6, label, .stTextInput > label, .stSelectbox > label {
+            color: #1d3557 !important;
+            font-weight: 700 !important;
         }
+
         .stSlider > div[data-baseweb="slider"] > div {
             color: #e63946;
         }
+
         .stButton>button {
             background-color: #e63946;
             color: white;
@@ -90,20 +92,21 @@ st.markdown("""
             padding: 10px 20px;
             font-weight: bold;
         }
+
         .stButton>button:hover {
             background-color: #a8dadc;
-            color: black;
-        }
-        .stSelectbox > div, .stNumberInput > div, .stTextInput > div {
             color: #1d3557;
         }
-        .st-bx {
+
+        .stNumberInput, .stSelectbox, .stTextInput {
             background-color: white;
+            color: #1d3557;
         }
+
         .stAlert {
-            font-weight: bold;
             background-color: #a8dadc;
             color: #1d3557;
+            font-weight: bold;
         }
     </style>
 """, unsafe_allow_html=True)
